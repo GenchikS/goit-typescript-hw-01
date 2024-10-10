@@ -21,7 +21,7 @@ const page1:user = {
     }
   }
   
-  const page2 = {
+  const page2:user = {
     title: 'Python or Js',
     likes: 5,
     accounts: ['Alex'],
