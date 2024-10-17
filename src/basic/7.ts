@@ -1,13 +1,16 @@
 // interface user {
-//     title: string,
-//     likes: number,
-//     accounts: string[],
-//     status: string,
-//     details?: {}
+//     [key:string]: string | number | string[] | {}
 // }
 
-interface user {
-    [key:string]: string | number |{} | [],
+ interface user {
+    title: string,
+    likes: number,
+    accounts: string[],
+    status: string,
+   details?: {
+     createAt: Date,
+     updateAt: Date
+   }
 }
 
 const page1:user = {
@@ -28,5 +31,5 @@ const page1:user = {
     status: 'close',
   }
 
-//   console.log(`page1`, page1)
-//   console.log(`page2`, page2)
+  // console.log(`page1`, page1)
+  // console.log(`page2`, page2)

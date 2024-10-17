@@ -5,19 +5,22 @@ type AllType = {
     weight: number
   }
 
+type top = Pick<AllType, `name` | `color`>
+type bottom = Pick<AllType, `position` | `weight`>
 
-type top = Pick<AllType, `name`| `color`>
-type bottom = Pick<AllType, `position`| `weight`>
-  
-  function compare<T> (topstring:top, bottomnumber:bottom):T | undefined {
-    return 
-    {
-        console.log(topstring.name)
-    //   topstring.name,
-    //   topstring.color,
-    //   bottomnumber.position,
-    //   bottomnumber.weight,
-    }
-  }
+// let test:AllType = {
+//   name: "Test",
+//   color: "red",
+//   position: 333,
+//   weight: 44,
+// };
 
-  compare(`nick`, 14)
+
+function compare(top: top, bottom: bottom):Object{
+  return {
+    name: top.name,
+    color: top.color,
+    position: bottom.position,
+    weight: bottom.weight,
+  };
+}

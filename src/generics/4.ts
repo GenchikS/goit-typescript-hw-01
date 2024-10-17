@@ -18,8 +18,8 @@ type User = {
   }
   
 //   console.log(
-  createOrUpdateUser({ 
-    email: 'user@mail.com', 
-    password: 'password123' 
-  })
+  // createOrUpdateUser({ 
+  //   email: 'user@mail.com', 
+  //   password: 'password123' 
+  // })
 // )
