@@ -1,14 +1,14 @@
-interface user {
-    title: string,
-    likes: number,
-    accounts: string[],
-    status: string,
-    details?: {
-        createAt: any,
-        updateAt: any
-    }
-}
+// interface user {
+//     title: string,
+//     likes: number,
+//     accounts: string[],
+//     status: string,
+//     details?: {}
+// }
 
+interface user {
+    [key:string]: string | number |{} | [],
+}
 
 const page1:user = {
     title: 'The awesome page',

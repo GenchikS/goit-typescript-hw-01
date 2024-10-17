@@ -1,3 +1,4 @@
+
 enum DayOfWeek {
     Monday = `true`,
     Tuesday = `true`,
@@ -8,16 +9,18 @@ enum DayOfWeek {
     Sunday = `false`
   }
   
-  
-  const isWeekend = (day:DayOfWeek) => {
+  let dayWeek: boolean;
+
+  const isWeekend = (day:DayOfWeek): boolean => {
+    
     if (day === `true` ){
-        console.log(`It is a day off - ${day}`)
+        dayWeek = true
     }
     else if (day === `false`) {
-        console.log(`It is a day off - ${day}`)
+        dayWeek = false
     }  
-    
+    return dayWeek
   }
 
-//   isWeekend(DayOfWeek.Sunday)
-//   isWeekend(DayOfWeek.Wednesday)
+//   console.log(isWeekend(DayOfWeek.Sunday))
+//   console.log(isWeekend(DayOfWeek.Wednesday))
