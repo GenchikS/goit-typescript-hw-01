@@ -1,12 +1,12 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 
-// async function fetchData<T>(url:):{} | undefined {
-//   try {
-//     const response:unknown = await axios.get(url);
-//     if (typeof response === Object && response !== null )
-//         return response;
-//   } catch (error) {
-//     throw new Error(`Error fetching from ${url}: ${error}`);
-//   }
-// }
+async function fetchData(url:string, callback: (data: Object)=> void) {
+  try {
+    const response = await axios.get(url);
+    if (typeof response === `object` && response !== null )
+        return response.data;
+  } catch (error) {
+    throw new Error(`Error fetching from ${url}: ${error}`);
+  }
+}
